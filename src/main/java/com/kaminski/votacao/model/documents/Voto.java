@@ -16,8 +16,10 @@ public class Voto {
 
     private OpcaoVoto opcaoVoto;
 
-    private String idAssociado;
+    private String associadoId;
 
-    private String idSessao;
+    private String pautaId;
+
+    private String sessaoId;
 
 }

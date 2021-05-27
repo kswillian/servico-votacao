@@ -11,9 +11,6 @@ public class AssociadoForm {
     private String nome;
 
     @NotEmpty
-    private String sobrenome;
-
-    @NotEmpty
     private String cpf;
 
 }
