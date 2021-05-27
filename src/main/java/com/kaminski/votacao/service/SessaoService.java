@@ -12,6 +12,8 @@ public interface SessaoService {
 
     Sessao encerrar(Sessao sessao);
 
+    Sessao divulgar(Sessao sessao);
+
     List<Sessao> listarTodos();
 
     List<Sessao> listarSessoesAbertas();

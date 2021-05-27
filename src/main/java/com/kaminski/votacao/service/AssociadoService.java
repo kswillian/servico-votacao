@@ -13,6 +13,4 @@ public interface AssociadoService {
 
     Associado buscarPorId(String id);
 
-    Boolean associadoExistePorCpf(String cpf);
-
 }
