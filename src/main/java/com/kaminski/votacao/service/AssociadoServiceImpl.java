@@ -41,6 +41,7 @@ public class AssociadoServiceImpl implements AssociadoService{
 
     @Override
     public Associado buscarPorId(String id) {
+        validacao.verificarSeAssociadoExiste(id);
         return associadoRepository.findById(id).get();
     }
 
