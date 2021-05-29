@@ -42,11 +42,8 @@ public class VotoServiceImpl implements VotoService{
 
         validacao.verificarSePautaExiste(idPauta);
         var pauta = pautaService.buscarPorId(idPauta);
-
-        var votos = votoRepository.findAllByPautaId(idPauta);
         var votosSim = votoRepository.countByPautaIdAndOpcaoVoto(idPauta, OpcaoVoto.SIM);
         var votosNao = votoRepository.countByPautaIdAndOpcaoVoto(idPauta, OpcaoVoto.NAO);
-
 
         return ResultadoPautaDto.builder()
                 .titulo(pauta.getTitulo())
