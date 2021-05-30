@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
 @Getter @SuperBuilder
-public class Validacao extends Excecao{
+public class ValidacaoErro extends Excecao {
 
     private String campo;
     private String mensagemCampo;

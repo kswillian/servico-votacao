@@ -34,7 +34,7 @@ public class ConfiguracaoSwagger {
 
     private ApiInfo apiInfo() {
 
-        ApiInfo apiInfo = new ApiInfoBuilder()
+        var apiInfo = new ApiInfoBuilder()
                 .title ("SERVIÇO - VOTAÇÃO")
                 .description ("Api desenvolvida para um serviço de votação para associados de uma cooperativa.")
                 .license("Apache License Version 2.0")

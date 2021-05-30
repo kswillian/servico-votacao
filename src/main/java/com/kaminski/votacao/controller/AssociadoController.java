@@ -5,7 +5,6 @@ import com.kaminski.votacao.model.form.AssociadoForm;
 import com.kaminski.votacao.service.AssociadoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

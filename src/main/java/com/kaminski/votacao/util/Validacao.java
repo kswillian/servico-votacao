@@ -1,9 +1,6 @@
 package com.kaminski.votacao.util;
 
-import com.kaminski.votacao.exception.RecursoNaoEncontradoException;
-import com.kaminski.votacao.exception.AssociadoPossuiCadastroException;
-import com.kaminski.votacao.exception.AssociadoPossuiVoto;
-import com.kaminski.votacao.exception.SessaoEncerradaException;
+import com.kaminski.votacao.exception.*;
 import com.kaminski.votacao.model.documents.Associado;
 import com.kaminski.votacao.model.documents.Pauta;
 import com.kaminski.votacao.model.documents.Sessao;
@@ -52,7 +49,7 @@ public class Validacao {
     }
 
     public void verificarSeSessaoEstaAberta(String idSessao) {
-        Sessao sessao = sessaoRepository.findById(idSessao).get();
+        var sessao = sessaoRepository.findById(idSessao).get();
         if(sessao.getStatus().equals(Boolean.FALSE))
             throw new SessaoEncerradaException(String.format("A sessão %s já foi encerrada para votação", idSessao));
     }

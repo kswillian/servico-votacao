@@ -29,7 +29,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         String fields = camposComErro.stream().map(FieldError::getField).collect(Collectors.joining(","));
         String messages = camposComErro.stream().map(FieldError::getDefaultMessage).collect(Collectors.joining(","));
 
-        Validacao validationErrorDetails = Validacao.builder()
+        var validationErrorDetails = ValidacaoErro.builder()
                 .titulo("Field Validation Error")
                 .statusCode(HttpStatus.BAD_REQUEST.value())
                 .detalhes("Field Validation Error")
