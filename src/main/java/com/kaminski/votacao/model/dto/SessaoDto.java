@@ -14,10 +14,8 @@ public class SessaoDto {
 
     private String id;
 
-    @JsonFormat(pattern = "dd-MM-YYYY HH:MM:ss")
     private LocalDateTime dataHoraInicio;
 
-    @JsonFormat(pattern = "dd-MM-YYYY HH:MM:ss")
     private LocalDateTime dataHoraFim;
 
     private String pauta;

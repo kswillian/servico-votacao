@@ -29,7 +29,7 @@ public class SessaoController {
     @GetMapping
     public ResponseEntity<List<Sessao>> listarTodos(){
         return ResponseEntity
-                .status(HttpStatus.CREATED)
+                .status(HttpStatus.OK)
                 .body(sessaoService.listarTodos());
     }
 
