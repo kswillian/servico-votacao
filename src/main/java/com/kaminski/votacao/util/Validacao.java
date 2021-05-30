@@ -8,6 +8,8 @@ import com.kaminski.votacao.repository.AssociadoRepository;
 import com.kaminski.votacao.repository.PautaRepository;
 import com.kaminski.votacao.repository.SessaoRepository;
 import com.kaminski.votacao.repository.VotoRepository;
+import com.kaminski.votacao.service.CpfServiceImpl;
+import feign.FeignException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +23,7 @@ public class Validacao {
     private SessaoRepository sessaoRepository;
     private PautaRepository pautaRepository;
     private VotoRepository votoRepository;
+    private CpfServiceImpl cpfService;
 
     public void verificarSeCpfJaPossuiCadastro(String cpf){
         if(associadoRepository.existsByCpf(cpf))
@@ -28,7 +31,17 @@ public class Validacao {
     }
 
     public void verificarSeCpfEhValido(String cpf) {
-        // implementar
+
+        try {
+
+            cpfService.validarCPF(cpf);
+
+        }catch (FeignException e){
+
+            throw new CpfInvalidoException(String.format("Favor, informar um CPF válido."));
+
+        }
+
     }
 
     public void verificarSeAssociadoExiste(String idAssociado) {

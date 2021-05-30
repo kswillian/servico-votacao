@@ -42,6 +42,20 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(validationErrorDetails);
     }
 
+    @ExceptionHandler(CpfInvalidoException.class)
+    public ResponseEntity<CpfInvalidoException> handleCpfInvalidoException(CpfInvalidoException cpfInvalidoException){
+        return new ResponseEntity(
+                Excecao.builder()
+                        .titulo(BAD_REQUEST)
+                        .statusCode(HttpStatus.BAD_REQUEST.value())
+                        .detalhes(cpfInvalidoException.getClass().getName())
+                        .timestamp(LocalDateTime.now())
+                        .mensagem(cpfInvalidoException.getMessage())
+                        .build(), HttpStatus.BAD_REQUEST
+
+        );
+    }
+
     @ExceptionHandler(AssociadoPossuiCadastroException.class)
     public ResponseEntity<AssociadoPossuiCadastroException> handleAssociadoPossuiCadastroException(AssociadoPossuiCadastroException associadoPossuiCadastroException){
         return new ResponseEntity(

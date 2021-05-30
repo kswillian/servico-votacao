@@ -1,6 +1,6 @@
 package com.kaminski.votacao.repository;
 
-import com.kaminski.votacao.model.documents.OpcaoVoto;
+import com.kaminski.votacao.model.enuns.OpcaoVoto;
 import com.kaminski.votacao.model.documents.Voto;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

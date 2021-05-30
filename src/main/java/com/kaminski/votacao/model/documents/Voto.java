@@ -1,5 +1,6 @@
 package com.kaminski.votacao.model.documents;
 
+import com.kaminski.votacao.model.enuns.OpcaoVoto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
