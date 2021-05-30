@@ -1,5 +1,6 @@
 package com.kaminski.votacao.model.documents;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,10 +13,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Associado {
 
     @Id
+    @ApiModelProperty(value = "Identificador único do associado.")
     private String id;
 
+    @ApiModelProperty(value = "Nome do associado.")
     private String cpf;
 
+    @ApiModelProperty(value = "CPF do associado.")
     private String nome;
 
 }
