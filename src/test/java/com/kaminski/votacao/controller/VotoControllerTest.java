@@ -1,7 +1,7 @@
 package com.kaminski.votacao.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kaminski.votacao.model.documents.OpcaoVoto;
+import com.kaminski.votacao.model.enuns.OpcaoVoto;
 import com.kaminski.votacao.model.documents.Voto;
 import com.kaminski.votacao.model.form.VotoForm;
 import com.kaminski.votacao.service.VotoServiceImpl;

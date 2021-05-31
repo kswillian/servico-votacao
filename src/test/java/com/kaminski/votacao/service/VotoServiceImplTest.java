@@ -2,7 +2,7 @@ package com.kaminski.votacao.service;
 
 import com.kaminski.votacao.exception.AssociadoPossuiVoto;
 import com.kaminski.votacao.exception.RecursoNaoEncontradoException;
-import com.kaminski.votacao.model.documents.OpcaoVoto;
+import com.kaminski.votacao.model.enuns.OpcaoVoto;
 import com.kaminski.votacao.model.documents.Pauta;
 import com.kaminski.votacao.model.documents.Voto;
 import com.kaminski.votacao.model.dto.ResultadoPautaDto;
