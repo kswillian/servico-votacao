@@ -6,6 +6,9 @@
 * String Data
 * Spring Web
 * Lombok
+* Mockito
+* JUnit
+* Swagger
 * Openfeign
 * MongoDB
 * RabbitMQ
