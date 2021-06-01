@@ -9,6 +9,8 @@ services:
       - 27017:27017
     volumes:
       - ~/.docker-conf/mongodb/data/:/data/db
+    networks:
+      - servico-votacao
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
@@ -19,6 +21,17 @@ services:
     volumes:
       - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
       - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - servico-votacao
+
+  api-votcao:
+    image: willianksantos/api-votacao
+    container_name: 'api-votacao'
+    ports:
+      - 8080:8080
+    depends_on:
+      - 'mongodb'
+      - 'rabbitmq'
     networks:
       - servico-votacao
 
